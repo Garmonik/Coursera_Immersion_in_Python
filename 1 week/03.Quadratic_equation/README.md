@@ -7,7 +7,7 @@ Python очень активно применяют ученые со всего
 
 ![image](https://user-images.githubusercontent.com/70436486/140744110-ac24d215-d54d-43a6-84da-74208653bd0d.png)
 
-Если вы не помните формулу (а мы и сами ее не помним!), позволяющую найти корни такого уравнения, обратитесь за помощью к статье в [Named Link](https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B5_%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5/ "Википедии").
+Если вы не помните формулу (а мы и сами ее не помним!), позволяющую найти корни такого уравнения, обратитесь за помощью к статье в [Википедии](https://ru.wikipedia.org/wiki/%D0%9A%D0%B2%D0%B0%D0%B4%D1%80%D0%B0%D1%82%D0%BD%D0%BE%D0%B5_%D1%83%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5/ "Квадратное уравнение").
 
 Ваша задача написать программу, которая запускается в командной строке с параметрами, вычисляет значения корней квадратного уравнения и выводит их на печать. На вход программе подаются коэффициенты a, b и c. На печать должно выводиться два корня квадратного уравнения. Обратите внимание на то, как выводятся корни - каждый с новой строки.
 
@@ -15,69 +15,24 @@ Python очень активно применяют ученые со всего
 
 Прочитать коэффициенты a,  b,  c вы можете следующим образом: 
 
-```C++
-class Person {
-public:
-  void ChangeFirstName(int year, const string& first_name) {
-    // добавить факт изменения имени на first_name в год year
-  }
-  void ChangeLastName(int year, const string& last_name) {
-    // добавить факт изменения фамилии на last_name в год year
-  }
-  string GetFullName(int year) {
-    // получить имя и фамилию по состоянию на конец года year
-  }
-private:
-  // приватные поля
-};
-```
-Считайте, что в каждый год может произойти не более одного изменения фамилии и не более одного изменения имени. При этом с течением времени могут открываться всё новые факты из прошлого человека, поэтому года́ в последовательных вызовах методов ChangeLastName и ChangeFirstName не обязаны возрастать.
-
-Гарантируется, что все имена и фамилии непусты.
-
-Строка, возвращаемая методом ***GetFullName***, должна содержать разделённые одним пробелом имя и фамилию человека по состоянию на конец данного года.
-
-   * Если к данному году не случилось ни одного изменения фамилии и имени, верните строку ***"Incognito"***.
-
-   * Если к данному году случилось изменение фамилии, но не было ни одного изменения имени, верните ***"last_name with unknown first name"***.
-
-   * Если к данному году случилось изменение имени, но не было ни одного изменения фамилии, верните ***"first_name with unknown last name"***.
-
-***Пример***
-
-**Код**
-
-```C++
-int main() {
-  Person person;
-  
-  person.ChangeFirstName(1965, "Polina");
-  person.ChangeLastName(1967, "Sergeeva");
-  for (int year : {1900, 1965, 1990}) {
-    cout << person.GetFullName(year) << endl;
-  }
-  
-  person.ChangeFirstName(1970, "Appolinaria");
-  for (int year : {1969, 1970}) {
-    cout << person.GetFullName(year) << endl;
-  }
-  
-  person.ChangeLastName(1968, "Volkova");
-  for (int year : {1969, 1970}) {
-    cout << person.GetFullName(year) << endl;
-  }
-  
-  return 0;
-}
+```Python
+import sys 
+a = int(sys.argv[1]) 
+b = int(sys.argv[2]) 
+c = int(sys.argv[3])
 ```
 
-**Вывод**
-```C++
-Incognito
-Polina with unknown last name
-Polina Sergeeva
-Polina Sergeeva
-Appolinaria Sergeeva
-Polina Volkova
-Appolinaria Volkova
+Примеры работ:
+
+```Python
+$ python solution.py 1 -3 -4
+4
+-1
+$ python solution.py 13 236 -396
+1
+-19
 ```
+
+Корни должны быть приведены к целочисленному виду перед выводом на экран, порядок вывода корней произвольный.
+
+Успехов в решении!
