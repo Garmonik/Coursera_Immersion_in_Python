@@ -35,41 +35,24 @@ value_1, value_2
 
 Файл следует создавать с помощью модуля [tempfile](https://docs.python.org/3/library/tempfile.html/ "tempfile"). 
 
-***Пример***
+```Python
+import os
+import tempfile
 
-**Код**
-
-```C++
-int main() {
-  Person person;
-  
-  person.ChangeFirstName(1965, "Polina");
-  person.ChangeLastName(1967, "Sergeeva");
-  for (int year : {1900, 1965, 1990}) {
-    cout << person.GetFullName(year) << endl;
-  }
-  
-  person.ChangeFirstName(1970, "Appolinaria");
-  for (int year : {1969, 1970}) {
-    cout << person.GetFullName(year) << endl;
-  }
-  
-  person.ChangeLastName(1968, "Volkova");
-  for (int year : {1969, 1970}) {
-    cout << person.GetFullName(year) << endl;
-  }
-  
-  return 0;
-}
+storage_path = os.path.join(tempfile.gettempdir(), 'storage.data')
+with open(storage_path, 'w') as f:
+  ...
 ```
 
-**Вывод**
-```C++
-Incognito
-Polina with unknown last name
-Polina Sergeeva
-Polina Sergeeva
-Appolinaria Sergeeva
-Polina Volkova
-Appolinaria Volkova
+**Пример работы:**
+
+```Python
+$ python storage.py --key key_name --val value
+$ python storage.py --key key_name
+value
+
+$ python storage.py --key multi_key --val value1
+$ python storage.py --key multi_key --val value2
+$ python storage.py --key multi_key
+value1, value2
 ```
