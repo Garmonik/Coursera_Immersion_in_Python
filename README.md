@@ -52,4 +52,4 @@ https://www.coursera.org/learn/programming-in-python/home/welcome
 - [X] **Programming Assignment:** Финальный проект. Сервер для приема метрик.
 
 
-![picture alt](https://github.com/Garmonik/Coursera_White_Belt_C_plus_plus/blob/main/Coursera_Certificate_White_Belt.png)
+![picture alt](https://github.com/Garmonik/Coursera_Immersion_in_Python/blob/main/Coursera_Immersion_in_Python.png)
