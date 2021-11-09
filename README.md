@@ -1,6 +1,6 @@
 # Программирование на Python
 
-![picture alt](![image](https://user-images.githubusercontent.com/70436486/140959445-cb548837-af41-4131-8ffe-287cb1873999.png))
+![picture alt](https://user-images.githubusercontent.com/70436486/140959445-cb548837-af41-4131-8ffe-287cb1873999.png)
 
 by Moscow Institute of Physics and Technology & Mail.Ru Group<br>
 https://www.coursera.org/learn/programming-in-python/home/welcome
