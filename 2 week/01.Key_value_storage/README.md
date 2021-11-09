@@ -9,7 +9,7 @@ Key-value хранилище<a name="TOP"></a>
 $ storage.py --key key_name --val value
 ```
 
-**Сохранение значения value по ключу key_name:***  
+***Сохранение значения value по ключу key_name:***  
 
 ```Python
 $ storage.py --key key_name
